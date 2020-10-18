@@ -54,3 +54,15 @@ async function getJokes(){
 }
 
 getJokes().then(jokes =>console.log(jokes))
+
+
+
+
+
+
+
+
+
+
+
+
