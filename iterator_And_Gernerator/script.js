@@ -1,7 +1,13 @@
 //Symbol()
+/*The data type symbol is a primitive data type.
+The Symbol() function returns a value of type symbol,
+has static properties that expose several members of built-in objects,
+has static methods that expose the global symbol registry, and resembles a built-in object class,
+but is incomplete as a constructor because it does not support the syntax "new Symbol()".
+*/
 let a = Symbol("Hello")
 let b = Symbol("Hello")
-console.log(a == b);
+console.log(a == b); // false ..... all Symbol() are unique.
 let Person = {
     name : "sajjad",
     age : 23,
@@ -50,7 +56,7 @@ let i = 1;
 
 
 
-// Custom iterator :
+// Custom iterator using custom Symbol :
 let names = ['sajjad','zahan','shakib','fahim']
 
 function customIterator(arr){
