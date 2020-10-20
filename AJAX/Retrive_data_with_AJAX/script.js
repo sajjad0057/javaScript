@@ -11,23 +11,19 @@ function loadJokes(){
     xhr.open('GET',`http://api.icndb.com/jokes/random/${num}`,true)
     
     //console.log(xhr);
+    let x = document.getElementById("spinner")
     xhr.onprogress = function(){
-        //console.log(this.readyState);
-        let x = document.getElementById("spinner")
-        if(this.readyState == 3){
             
             x.className = "spinner-border text-warning"
              
             // console.log(x);
-        }else{
-                x.remove()
-
-        }
 
     }
+    
     xhr.onload = function(){
        // console.log(this.readyState);
-        if(this.status == 200){
+        if(this.status == 200 && this.readyState == 4){
+            x.classList.remove("spinner-border")
             let data = JSON.parse(this.responseText)
             //console.log(data);
             let jokes= data.value
