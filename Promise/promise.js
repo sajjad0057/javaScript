@@ -15,7 +15,7 @@ let prom = new Promise((resolve,reject)=>{
 
 })
 
-// //.then .catch
+// .then .catch
 
 prom.then((message)=>{
     console.log("resolve has been called :" + message);
@@ -54,3 +54,15 @@ async function getJokes(){
 }
 
 getJokes().then(jokes =>console.log(jokes))
+
+
+
+
+
+
+
+
+
+
+
+
