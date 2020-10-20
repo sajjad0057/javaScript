@@ -23,7 +23,7 @@ function loadJokes(){
     xhr.onload = function(){
        // console.log(this.readyState);
         if(this.status == 200 && this.readyState == 4){
-            x.classList.remove("spinner-border")   // if want to remove multiple class at a time useing remove("class_name","class_name", ....)
+            x.classList.remove("spinner-border","text-warning")   // if want to remove single class at a time useing   ___ .remove("class_name","class_name", ....)
             let data = JSON.parse(this.responseText)
             //console.log(data);
             let jokes= data.value
