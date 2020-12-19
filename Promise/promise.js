@@ -48,12 +48,20 @@ console.log('after Promise');
 // Uses Of "async" and "await"  keyWord
 
 async function getJokes(){
-    let response = await fetch('http://api.icndb.com/jokes/random/600')
+    let response = await fetch('http://api.icndb.com/jokes/random/600')  
     let data = await response.json()
     return data
 }
 
-getJokes().then(jokes =>console.log(jokes))
+getJokes().then(jokes =>console.log("Using async:",jokes))
+
+
+// // if using async keyword before the function, the fucntion return a promise... 
+// here getJokes() return a promise..and use .then with this promise we  had been retrive data normally .
+
+
+
+
 
 
 
